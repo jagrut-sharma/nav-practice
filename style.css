@@ -3,7 +3,7 @@
 :root{
     --background-color: #F9A826;
     --black-color: black;
-    --hover-color: beige;
+    --hover-color: green;
 }
 
 body{
@@ -22,7 +22,7 @@ body{
     text-align: center;
     position: relative;
     width: 100%;
-    /* padding-bottom: 0.15rem; */
+    z-index: 2;
 }
 
 .nav{
@@ -46,6 +46,7 @@ body{
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .nav .list-padding{
@@ -109,4 +110,59 @@ body{
 
 .nav-toggle-label span::after{
     top: 7px;
+}
+
+@media screen and (min-width: 800px) {
+    
+    .nav-toggle-label{
+        display: none;
+    }
+
+    .header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .logo{
+        grid-column: 2 / 3;
+    }
+
+    .nav{
+        all: unset;
+        grid-column: 3/4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .nav .list{
+        display: flex;
+    }
+
+    .nav .list-padding{
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+    .nav .list-non-bullet .normal-text-link{
+        opacity: 1;
+        position: relative;
+    }
+
+    .nav .list-non-bullet .normal-text-link::before{
+        content: "";
+        display: block;
+        background-color: var(--black-color);
+        height: 3px;
+        position: absolute;
+        bottom: -0.5em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transform-origin: center;
+        transition: transform ease 250ms;
+    }    
+    .nav .list-non-bullet .normal-text-link:hover::before{
+        transform: scale(1, 1);
+    }
 }
