@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root{
-    --background-color: #F9A826;
-    --black-color: black;
-    --hover-color: green;
+    --primary-color: #F9A826;
+    --secondary-color: black;
+    --green-color: green;
 }
 
 body{
@@ -18,7 +18,7 @@ body{
 }
 
 .header{
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
     text-align: center;
     position: relative;
     width: 100%;
@@ -30,7 +30,7 @@ body{
     text-align: left;
     top: 100%;
     left: 0;
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
     width: 100%;
     transform: scale(1,0);
     transition: transform 350ms ease-in-out;
@@ -56,7 +56,7 @@ body{
 
 .nav .list-non-bullet .normal-text-link{
     text-decoration: none;
-    color: var(--black-color);
+    color: var(--secondary-color);
     font-weight: 600;
     font-size: 1.2rem;
     opacity: 0;
@@ -64,7 +64,7 @@ body{
 }
 
 .nav .normal-text-link:hover{
-    color: var(--hover-color);
+    color: var(--green-color);
 }
 
 .nav-toggle:checked ~ nav{
@@ -92,7 +92,7 @@ body{
 
 .nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after{
     display: block;
-    background-color: var(--black-color);
+    background-color: var(--secondary-color);
     height: 2px;
     width: 2em;
     position: relative;
@@ -152,7 +152,7 @@ body{
     .nav .list-non-bullet .normal-text-link::before{
         content: "";
         display: block;
-        background-color: var(--black-color);
+        background-color: var(--green-color);
         height: 3px;
         position: absolute;
         bottom: -0.5em;
